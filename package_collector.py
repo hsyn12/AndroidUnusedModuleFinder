@@ -1,14 +1,19 @@
 """
 package_collector.py
 
-This script is used to find usage of specific package in all the modules that are used in the android project.
+This script is used to find usage of specific package in all the modules
+that are used in the android project.
+Can be used to find unused packages in the project.
+For example, a module included by another module, but maybe it is never used.
+That is the finder that unused modules.
 
 """
+from os import listdir
+from os import path
+
 from ModuleFinder import _exit
 from UnusedModuleFinder import get_declared_modules
 from UnusedModuleFinder import get_selected_directory
-from os import listdir
-from os import path
 
 modules: list[str] = []
 search_package: str = ''

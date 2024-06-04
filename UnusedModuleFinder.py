@@ -1,10 +1,20 @@
+"""
+UnusedModuleFinder.py
+
+This script is used to find unused modules in the android project.
+This is only for created library by hand in the project.
+Searches are done in all build.gradle and build.gradle.kts files.
+If a module that include in the ''settings.gradle' is not used, it will be printed.
+It also works for nested modules, max level is 5.
+"""
+
 import re
 
-from SelectedDirectory import SelectedDirectory
-from ModuleFinder import select_directory
-from ModuleFinder import find_module
 from ModuleFinder import _exit
+from ModuleFinder import find_module
+from ModuleFinder import select_directory
 from ModuleFinder import set_search_module
+from SelectedDirectory import SelectedDirectory
 
 settings_gradle: str = 'settings.gradle'
 all_modules: dict[str, list[str]] = dict()

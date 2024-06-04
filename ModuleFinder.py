@@ -1,8 +1,19 @@
+"""
+ModuleFinder.py
+
+This script is used to find specific module that are used in the android project.
+Searching is done on all build.gradle and build.gradle.kts files.
+
+For example, "time" : search with ":time"
+and finds all libraries that use ":time"
+"""
+
 import os
-from tkinter import filedialog
+import re
 from os import listdir
 from os import path
-import re
+from tkinter import filedialog
+
 from SelectedDirectory import SelectedDirectory
 
 if os.name == 'nt':
