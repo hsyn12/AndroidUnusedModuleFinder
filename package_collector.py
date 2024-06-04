@@ -7,6 +7,10 @@ Can be used to find unused packages in the project.
 For example, a module included by another module, but maybe it is never used.
 That is the finder that unused modules.
 
+For example, "com.google.android.material"
+
+If this package is not used in any module, it will be printed.
+If it is used it will be printed where it is used.
 """
 from os import listdir
 from os import path
